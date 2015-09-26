@@ -1,0 +1,38 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+class Prison {
+	float beds_, prisoners_, cells_;   // beds is a private member
+
+public:
+	float beds() const { return beds_; }  //getter
+	void set_beds(float a) { beds_ = a; } //setter
+	float prisoners() const { return prisoners_; } //getter
+	void set_prisoners(float b) { prisoners_ = b; } //setter
+	float cells() const { return cells_; } //getter
+	void set_cells(float c) { cells_ = c; } //setter
+};
+
+class Prisoner{
+public:
+	int months_, served_, release_, children_;
+	char residence_, visitors_;
+	float hours_, pay_, balance_, number_, health_;
+};
+
+class Guard{
+public:
+	char weapon_, contraband_, beating_;
+	bool steroid_, probation_, gang_; //Yes or no
+	int infractions_;
+};
+
+int main()
+{
+	Prison P;
+	P.set_cells(40); //cells initialized to 40
+
+	system("PAUSE");
+	return EXIT_SUCCESS;
+}
